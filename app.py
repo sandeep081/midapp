@@ -31,7 +31,7 @@ if file is None:
 
 else:
   file_bytes=np.asarray(bytearray(file.read()),dtype=np.uint8)
-  image=cv2.imdecode(file_bytes,1)
+  image=cv.imdecode(file_bytes,1)
   st.image(file,caption='Uploaded Image',use_column_width=True)
   if Transformation == "Scaling":
     print(image.shape)
