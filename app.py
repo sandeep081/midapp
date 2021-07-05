@@ -30,7 +30,9 @@ if file is None:
   st.text("Please upload an image")
 
 else:
-  image = file
+  file_bytes=np.asarray(bytearray(file.read()),dtype=np.uint8)
+  image=cv2.imdecode(file_bytes,1)
+  st.image(file,caption='Uploaded Image',use_column_width=True)
   if Transformation == "Scaling":
     print(image.shape)
 
@@ -128,9 +130,7 @@ else:
       plt.xticks([100]), plt.yticks([100])
     plt.show()
 
-  file_bytes=np.asarray(bytearray(file.read()),dtype=np.uint8)
-  image=cv2.imdecode(file_bytes,1)
-  st.image(file,caption='Uploaded Image',use_column_width=True)
+  
 
 if st.button("Change Color"):
   result=change_color(image)
