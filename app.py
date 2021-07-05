@@ -30,6 +30,7 @@ if file is None:
   st.text("Please upload an image")
 
 else:
+  image = file
   if Transformation == "Scaling":
     print(image.shape)
 
