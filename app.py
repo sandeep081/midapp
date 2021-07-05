@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import cv2 as cv
 import matplotlib.pyplot as plt
+import streamlit as st
 st.set_option('deprecation.showfileUploaderEncoding',False)
 html_temp = """
    <div class="" style="background-color:blue;" >
