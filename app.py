@@ -44,10 +44,7 @@ else:
     M = np.float32([[2, 0, 0],
                     [0, 2, 0],
                     [0, 0, 1]])
-    scaled_img = cv.warpPerspective(image, M, (cols * 2, rows * 2))
-    cv2_imshow(scaled_img)
-    print(scaled_img.shape)
-    plt.imsave("fruits_scaled.jpg", scaled_img)
+    image = cv.warpPerspective(image, M, (cols * 2, rows * 2))
 
   if Transformation == "Shearing":
     plt.axis('off')
@@ -58,13 +55,8 @@ else:
                      [0.5, 1, 0],
                      [0, 0, 1]])
 
-    sheared_img = cv.warpPerspective(image, M1, (int(cols * 1.5), int(rows * 1.5)))
+    image = cv.warpPerspective(image, M1, (int(cols * 1.5), int(rows * 1.5)))
     # sheared_imgy = cv.warpPerspective(image,M2,(int(cols*1.5),int(rows*1.5)))
-
-    plt.axis('off')
-
-    plt.imshow(sheared_imgx)
-    plt.show()
 
   if Transformation == "Reflection":
     plt.imshow(image)
@@ -91,14 +83,10 @@ else:
                     [0, val_x, x],
                     [0, 0, 1]])
 
-    reflected_img = cv.warpPerspective(image, M, (int(cols), int(rows)))
-    plt.imshow(reflected_img)
-    plt.show()
+    image = cv.warpPerspective(image, M, (int(cols), int(rows)))
 
   if Transformation == "Rotation":
     rotation_angle = 20
-    plt.imshow(image)
-    plt.show()
     rows, cols, dim = image.shape
     angle = np.radians(rotation_angle)
     M = np.float32([[np.cos(angle), -(np.sin(angle)), 0],
