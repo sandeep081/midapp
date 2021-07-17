@@ -9,7 +9,7 @@ html_temp = """
    <div class="clearfix">           
    <div class="col-md-12">
 
-   <center><p style="font-size:25px;color:white;margin-top:10px;"Color Palette </p></center> 
+   <center><p style="font-size:25px;color:white;margin-top:10px;"Transformations </p></center> 
    </div>
    </div>
    </div>
