@@ -92,10 +92,10 @@ else:
     M = np.float32([[np.cos(angle), -(np.sin(angle)), 0],
                     [np.sin(angle), np.cos(angle), 0],
                     [0, 0, 1]])
-    rotated_img = cv.warpPerspective(image, M, (int(cols), int(rows)))
-    plt.imshow(rotated_img)
-    plt.show()
-    plt.imsave("lrotated.jpg", rotated_img)
+    image = cv.warpPerspective(image, M, (int(cols), int(rows)))
+#     plt.imshow(rotated_img)
+#     plt.show()
+#     plt.imsave("lrotated.jpg", rotated_img)
   if Transformation == "Translation":
     M = np.float32([[1, 0, 20], [0, 1, 100], [0, 0, 1]])
     img1 = cv.warpPerspective(image, M, (image.shape[1] * 2, image.shape[0] * 2))
