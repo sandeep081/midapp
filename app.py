@@ -112,7 +112,7 @@ else:
     titles = ['Orig', 'down', 'up', 'To the right', 'left']
     images = [image, img1, img2, img3, img4]
     for i in range(1, 6):
-      
+      pass
     
 
   
