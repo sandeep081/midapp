@@ -128,7 +128,7 @@ html_temp = """
    <div class="" style="background-color:orange;" >
    <div class="clearfix">           
    <div class="col-md-12">
-   <center><p style="font-size:20px;color:white;margin-top:10px;">Color Palette</p></center> 
+   <center><p style="font-size:20px;color:white;margin-top:10px;">Transformations</p></center> 
    </div>
    </div>
    </div>
