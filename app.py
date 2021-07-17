@@ -16,7 +16,7 @@ html_temp = """
    """
 
 st.markdown(html_temp,unsafe_allow_html=True)
-st.header("Color Palette ")
+st.header("TransFormations ")
 
 file=st.file_uploader("Please upload image",type=("jpg","png","jpeg"))
 Transformation = st.selectbox('How would you like to be contacted?',   ("Translation","Scaling","Shearing","Reflection","Rotation"))
