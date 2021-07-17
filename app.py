@@ -61,8 +61,9 @@ else:
   if Transformation == "Reflection":
     plt.imshow(image)
     plt.show()
-    x_axis = False
-    y_axis = True
+   
+    x_axis = st.checkbox("X Axis")
+    y_axis = st.checkbox("Y Axis")
     rows, cols, dim = image.shape
     x = 0
     y = 0
@@ -111,12 +112,8 @@ else:
     titles = ['Orig', 'down', 'up', 'To the right', 'left']
     images = [image, img1, img2, img3, img4]
     for i in range(1, 6):
-      plt.subplot(2, 3, i)
-
-      plt.imshow(images[i - 1])
-      plt.title(titles[i - 1])
-      plt.xticks([100]), plt.yticks([100])
-    plt.show()
+      
+    
 
   
 
@@ -124,7 +121,7 @@ if st.button("Change Color"):
   result=change_color(image)
 
 if st.button("About"):
-  st.subheader("Developed by Prashant Jain")
+  st.subheader("Developed by Sandeep Jangid")
   st.subheader("PGI")
 html_temp = """
    <div class="" style="background-color:orange;" >
