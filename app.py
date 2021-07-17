@@ -111,7 +111,7 @@ else:
     img4 = cv.warpPerspective(image, M, (image.shape[1], image.shape[0]))
     titles = ['Orig', 'down', 'up', 'To the right', 'left']
     images = [image, img1, img2, img3, img4]
-    for i in range(1, 6):
+    for i in range(1, 5):
       image = images[i]
       change_color(image)
     
